@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const testtimonies = [
   'Tuvieron la invitación a tiempo. Todo perfecto.',
   'Todo excelente. Muy recomendable.',
@@ -12,7 +14,14 @@ export default function Testimonies() {
         {testtimonies.map((text, i) => (
           <div key={i} className="border p-4 rounded shadow">
             <div className="flex items-center gap-2 mb-2">
-              <img src="https://placehold.co/40x40" className="rounded-full" alt="Avatar" />
+              <Image
+                src="https://placehold.co/40x40"
+                alt="Avatar"
+                width={40}
+                height={40}
+                className="rounded-full"
+                unoptimized
+              />
               <span>★★★★★</span>
             </div>
             <p>{text}</p>
